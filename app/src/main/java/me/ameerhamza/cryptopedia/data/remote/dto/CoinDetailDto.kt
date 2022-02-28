@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 import me.ameerhamza.cryptopedia.domain.model.CoinDetail
 
 data class CoinDetailDto(
-    val description: String,
+    val description: String?,
     val development_status: String,
     val first_data_at: String,
     val hardware_wallet: Boolean,
@@ -20,10 +20,10 @@ data class CoinDetailDto(
     val open_source: Boolean,
     val org_structure: String,
     val proof_type: String,
-    val rank: Int,
+    val rank: Int?,
     val started_at: String,
     val symbol: String,
-    val tags: List<Tag>,
+    val tags: List<Tag>?,
     @SerializedName("team")
     val teamMembers: List<TeamMember>?,
     val type: String,
@@ -38,7 +38,7 @@ fun CoinDetailDto.toCoinDetail() : CoinDetail {
         description = description,
         symbol = symbol,
         isActive = is_active,
-        tags = tags.map { it.name },
+        tags = tags?.map { it.name },
         teamMembers = teamMembers
     )
 }

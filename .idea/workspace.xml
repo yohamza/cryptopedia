@@ -5,11 +5,25 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87ed7724-04b0-477b-821e-81ca50208388" name="Default Changelist" comment="" />
+    <list default="true" id="87ed7724-04b0-477b-821e-81ca50208388" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/data/remote/dto/CoinDetailDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/data/remote/dto/CoinDetailDto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/domain/model/CoinDetail.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/domain/model/CoinDetail.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/components/CoinDetailScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/components/CoinDetailScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/components/CoinListItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/components/CoinListItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/components/CoinListScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/components/CoinListScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -1,5 +1,6 @@
 package me.ameerhamza.cryptopedia.presentation.coin_detail.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.CircularProgressIndicator
@@ -13,10 +14,14 @@ import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import coil.compose.rememberImagePainter
+import coil.decode.SvgDecoder
 import com.google.accompanist.flowlayout.FlowRow
 import me.ameerhamza.cryptopedia.data.remote.dto.TeamMember
 import me.ameerhamza.cryptopedia.presentation.Screen
@@ -32,7 +37,7 @@ fun CoinDetailScreen(
         state.coin?.let { coin ->
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(20.dp)
+                contentPadding = PaddingValues(10.dp)
             ) {
                 item {
                     Row(
@@ -40,27 +45,35 @@ fun CoinDetailScreen(
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
 
-                        Text(
-                            text = "${coin.rank}. ${coin.name} (${coin.symbol})",
-                            style = MaterialTheme.typography.h2,
-                            modifier = Modifier.weight(8f)
+                        Image(
+                            painter = rememberImagePainter("https://static.coinpaprika.com/coin/${coin.coinId}/logo.png"),
+                            contentDescription = null,
+                            modifier = Modifier.size(64.dp)
                         )
-
                         Text(
-                            text = if (coin.isActive) "active" else "inactive",
-                            color = if (coin.isActive) Color.Green else Color.Red,
-                            fontStyle = FontStyle.Italic,
-                            textAlign = TextAlign.Center,
+                            text = "${coin.name} (${coin.symbol})",
+                            style = MaterialTheme.typography.h2,
                             modifier = Modifier
+                                .weight(8f)
                                 .align(CenterVertically)
-                                .weight(2f),
+                                .padding(start = 15.dp)
+                        )
+                        Image(
+                            painter = rememberImagePainter(
+                                "https://graphs.coinpaprika.com/currency/chart/${coin.coinId}/7d/chart.svg",
+                                builder = {
+                                    decoder(SvgDecoder(LocalContext.current))
+                                }
+                            ),
+                            contentDescription = null,
+                            modifier = Modifier.height(40.dp).padding(start = 10.dp).align(CenterVertically)
                         )
 
                     } //: HEADER
 
                     Spacer(modifier = Modifier.height(15.dp))
                     Text(
-                        text = coin.description,
+                        text = coin.description ?: "",
                         style = MaterialTheme.typography.body2
                     )
                     Spacer(modifier = Modifier.height(15.dp))
@@ -74,7 +87,7 @@ fun CoinDetailScreen(
                         crossAxisSpacing = 10.dp,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        coin.tags.forEach { tag ->
+                        coin.tags?.forEach { tag ->
                             CoinTag(text = tag)
                         }
                     }
