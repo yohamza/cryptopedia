@@ -43,7 +43,7 @@ fun CryptopediaTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
+        typography = quickSandTypography,
         shapes = Shapes,
         content = content
     )

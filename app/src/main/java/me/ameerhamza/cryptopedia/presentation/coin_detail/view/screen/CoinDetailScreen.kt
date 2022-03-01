@@ -9,6 +9,8 @@ import androidx.compose.material.Text
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Divider
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterVertically
@@ -22,10 +24,17 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberImagePainter
 import coil.decode.SvgDecoder
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.rememberLottieComposition
 import com.google.accompanist.flowlayout.FlowRow
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import me.ameerhamza.cryptopedia.R
 import me.ameerhamza.cryptopedia.data.remote.dto.TeamMember
 import me.ameerhamza.cryptopedia.presentation.Screen
 import me.ameerhamza.cryptopedia.presentation.coin_detail.viewmodel.CoinDetailViewModel
+import java.util.logging.Handler
 
 @Composable
 fun CoinDetailScreen(
@@ -66,7 +75,10 @@ fun CoinDetailScreen(
                                 }
                             ),
                             contentDescription = null,
-                            modifier = Modifier.height(40.dp).padding(start = 10.dp).align(CenterVertically)
+                            modifier = Modifier
+                                .height(40.dp)
+                                .padding(start = 10.dp)
+                                .align(CenterVertically)
                         )
 
                     } //: HEADER
@@ -128,6 +140,9 @@ fun CoinDetailScreen(
         }
         if (state.isLoading) {
             CircularProgressIndicator(modifier = Modifier.align(Center))
+            LaunchedEffect(true) {
+                delay(2000)
+            }
         }
     }
 }
