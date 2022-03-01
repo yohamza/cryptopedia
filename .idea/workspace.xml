@@ -15,14 +15,18 @@
   <component name="ChangeListManager">
     <list default="true" id="87ed7724-04b0-477b-821e-81ca50208388" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/data/remote/dto/CoinDetailDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/data/remote/dto/CoinDetailDto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/domain/model/CoinDetail.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/domain/model/CoinDetail.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/components/CoinDetailScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/components/CoinDetailScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/components/CoinListItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/components/CoinListItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/components/CoinListScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/components/CoinListScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/data/remote/dto/Links.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/data/remote/dto/LinksExtended.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/data/remote/dto/Stats.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/data/remote/dto/Tag.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/data/remote/dto/TeamMember.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/data/remote/dto/Whitepaper.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/components/CoinDetailScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/view/screen/CoinDetailScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/components/CoinTag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/view/components/CoinTag.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/components/TeamListItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/view/components/TeamListItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/components/CoinListItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/view/components/CoinListItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/components/CoinListScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_list/view/screen/CoinListScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +78,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/java/me/ameerhamza/cryptopedia/presentation/coin_detail/components" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="me.ameerhamza.cryptopedia.data.remote.dto" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="me.ameerhamza.cryptopedia.presentation.coin_detail.ui_state" />
@@ -152,5 +159,16 @@
       <updated>1645255645564</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

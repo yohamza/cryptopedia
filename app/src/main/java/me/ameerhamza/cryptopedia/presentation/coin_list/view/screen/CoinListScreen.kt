@@ -1,12 +1,9 @@
 package me.ameerhamza.cryptopedia.presentation.coin_list.components
 
 import android.widget.ProgressBar
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.*
 import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.TweenSpec
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.slideIn
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -37,24 +34,18 @@ fun CoinListScreen(
 ) {
     val state = viewModel.state.value
     Box(modifier = Modifier.fillMaxSize()) {
-        LazyColumn(modifier = Modifier.fillMaxSize()) {
+        LazyColumn(modifier = Modifier.fillMaxSize().animateContentSize { initialValue, targetValue ->  }) {
             items(
                 state.coins,
-                key = {item: Coin -> item.id}
+                key = { item: Coin -> item.id }
             ) { coin ->
-                AnimatedVisibility(
-                    visible = coin.isActive,
-                    enter = fadeIn(
-                        animationSpec = TweenSpec(200, 200, FastOutLinearInEasing),
-                    )
-                ) {
-                    CoinListItem(
-                        coin = coin,
-                        onItemClick = {
-                            navController.navigate(Screen.CoinDetailScreen.route + "/${coin.id}")
-                        }
-                    )
-                }
+
+                CoinListItem(
+                    coin = coin,
+                    onItemClick = {
+                        navController.navigate(Screen.CoinDetailScreen.route + "/${coin.id}")
+                    }
+                )
             }
         } //: LAZYSCOPE
         if (state.error.isNotBlank()) {
@@ -69,7 +60,7 @@ fun CoinListScreen(
 
             )
         }
-        if(state.isLoading) {
+        if (state.isLoading) {
             CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
         }
     }

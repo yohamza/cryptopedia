@@ -42,3 +42,43 @@ fun CoinDetailDto.toCoinDetail() : CoinDetail {
         teamMembers = teamMembers
     )
 }
+
+data class Links(
+    val explorer: List<String>,
+    val facebook: List<String>,
+    val reddit: List<String>,
+    val source_code: List<String>,
+    val website: List<String>,
+    val youtube: List<String>
+)
+
+data class LinksExtended(
+    val stats: Stats,
+    val type: String,
+    val url: String
+)
+
+data class Stats(
+    val contributors: Int,
+    val followers: Int,
+    val stars: Int,
+    val subscribers: Int
+)
+
+data class Tag(
+    val coin_counter: Int,
+    val ico_counter: Int,
+    val id: String,
+    val name: String
+)
+
+data class TeamMember(
+    val id: String,
+    val name: String,
+    val position: String
+)
+
+data class Whitepaper(
+    val link: String,
+    val thumbnail: String
+)
