@@ -1,7 +1,7 @@
 .DS_Store
 /.build
-/.gradle
-/.idea
+.gradle/
+.idea/
 local.properties
 gradle
 /Packages
@@ -11,3 +11,4 @@ DerivedData/
 .swiftpm/config/registries.json
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
+local.properties
