@@ -1,4 +1,4 @@
-# Project Title
+# Cryptopedia
 
 Cryptopedia gives you basic info about all the crypto coins
 
