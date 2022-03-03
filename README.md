@@ -27,5 +27,5 @@ ____ <img src="https://i.imgur.com/qeBayC8.png" width="30%"></img> ____ <img src
 Contributors names and contact info
 
 Ameer Hamza  
-Twitter: [@realHamzaBhatti](https://twitter.com/ameerpro)
+Twitter: [@realHamzaBhatti](https://twitter.com/realHamzaBhatti)
 Instagram: [@dev.ameer](https://instagram.com/dev.ameer)
